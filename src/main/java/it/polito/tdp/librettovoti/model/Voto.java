@@ -3,31 +3,38 @@ package it.polito.tdp.librettovoti.model;
 import java.util.Objects;
 
 public class Voto {
-	private String nome ;
-	private int punti ;
+	private String nome;
+	private int punti;
+	
 	
 	public Voto(String nome, int punti) {
 		super();
 		this.nome = nome;
 		this.punti = punti;
 	}
+	
 	public String getNome() {
 		return nome;
 	}
+	
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	
 	public int getPunti() {
 		return punti;
 	}
+	
 	public void setPunti(int punti) {
 		this.punti = punti;
 	}
-	
+
 	@Override
 	public String toString() {
-		return nome+" : "+ punti;
+		// return "Voto [nome=" + nome + ", punti=" + punti + "]";
+		return nome + " : " + punti;
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -35,7 +42,8 @@ public class Voto {
 		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
 		result = prime * result + punti;
 		return result;
-	}
+	}  
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -54,8 +62,9 @@ public class Voto {
 			return false;
 		return true;
 	}
+
 	
 	
 	
-		
+	
 }
